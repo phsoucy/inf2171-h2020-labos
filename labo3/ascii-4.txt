@@ -1,0 +1,142 @@
+; ************************************************************************************************
+;       Programme: ASCII-4.TXT     version PEP813 sous Windows
+;
+;       version 4: 1- n'accepte qu'un seul caractère à l'entrée.
+;                  2- à l'affichage, il affiche 5 caractères par ligne.
+;                  3- la valeur en décimal occupe 3 positions. (ex: 004, 024)
+;                  4- les caractères ascii 9, 10, 13 et 173 ainsi que 128 à 159 sont remplacés par l'espace.
+;                  5- tient compte de la position des caractères et recule s'il y a lieu.
+;                  6 -le programme recommence tant et aussi longtemps que l'utilisateur
+;                     n'entre pas le caractère ENTREE.
+;
+;      -----------------------------------------------------------
+;      A DEVELOPPER en classe en se basant sur le programme ASCII3
+;      -----------------------------------------------------------
+;
+;       Ce programme affiche une liste partielle des 256 caractères ASCII.
+;
+;       auteur:   Bernard Martin
+;       courriel: martin.bernard@uqam.ca
+;       date:     Eté 2017
+;       cours:    INF2170
+; ************************************************************************************************
+;
+; affichage du message de bienvenue
+;
+         STRO    welcome,d   ; message d'entête
+firstCar:STRO    demande1,d  
+;
+; saisie du caractère de départ
+;
+         CHARI   caract,d    ; limite inférieure
+
+         ; (6) recommencer le programme
+         LDBYTEA caract,d
+         CPA     '\n',i
+         BREQ    termine
+
+         CHARI   entrée,d    ; se débarrasser du ENTREE
+
+         ; (1) n'accepte qu'un seul caractère à l'entrée
+         LDBYTEA entrée,d
+         CPA     '\n',i
+         BREQ    endCar
+retry:   STRO    erNbrCar,d 
+viderCa: CHARI   entrée,d
+         LDBYTEA entrée,d
+         CPA     '\n',i
+         BREQ    firstCar
+         BR      viderCa
+
+endCar:  STRO    demande2,d  ; message de demande pour la limite inférieure
+;
+; saisie du caractère de terminaison
+;
+         CHARI   limite,d    ; limite supérieure
+         CHARI   entrée,d
+         LDBYTEA entrée,d
+         CPA     '\n',i
+         BRNE    retry
+         STRO    liste,d     ; message à afficher
+;
+; on affiche un par un les caractères
+;
+         LDA     0,i         ; initialisation à 0 du registre accumulateur
+         LDBYTEA caract,d    ; caractère ASCII de départ
+boucle:  CHARO   '(',i       ; affiche le symbole (
+
+         ; (3) AFFICHER 3 POSITIONS
+         ;CPA     0,i
+         ;BRNE    chif1
+         ;DECO    0,i
+         CPA     256,i
+         BRNE    chif1
+         LDA     0,i
+chif1:   CPA     10,i
+         BRGE    chif2 
+         DECO    0,i
+chif2:   CPA     100,i
+         BRGE    chif3
+         DECO    0,i
+
+chif3:   DECO    avcaract,d  ; affiche en décimal (2 octets, soit la combinaison "avcaract" et "caract")
+         CHARO   ')',i       ; affiche le symbole )
+         CHARO   '=',i       ; affiche le symbole =
+
+         ; (4) 9, 10, 13 et 173, 128 à 159 sont remplacés par l'espace.
+         CPA     9,i
+         BREQ    affSpace
+         CPA     10,i
+         BREQ    affSpace
+         CPA     13,i
+         BREQ    affSpace
+         CPA     173,i
+         BREQ    affSpace
+         CPA     128,i
+         BRLT    affCar
+         CPA     159,i
+         BRGT    affCar    
+         
+affSpace:CHARO   ' ',i
+         BR      affNext
+affCar:  CHARO   caract,d    ; affiche la valeur ASCII (1 octet)
+affNext: CHARO   ' ',i       ; affiche un ESPACE
+         ;ANDA    7,i         ; isole les 2 derniers bits
+         ;CPA     5,i         ; car on désire en mettre 5 par ligne
+
+         ; AFFICHER 5 PAR LIGNES (2)
+         LDA     cpt,d
+         ADDA    1,i
+         STA     cpt,d
+         CPA     5,i
+         BRNE    passaut     ; on ne saute pas de ligne si la ligne est non pleine
+         LDA     0,i
+         STA     cpt,d
+         CHARO   '\n',i      ; affiche un saut de ligne
+passaut: LDA     0,i
+
+         LDBYTEA caract,d    ; caractère ASCII
+         CPA     avlimite,d  ; limite supérieure atteinte ?
+         BREQ    firstCar    ; oui, on termine // recommence le programme
+         ADDA    1,i         ; caractère suivant
+         STBYTEA caract,d    ; on le conserve
+         BR      boucle      ; on recommence
+;
+; affichage d'une chaine de caractères indiquant la fin du traitement
+;
+termine: STRO    final,d     ; message de terminaison
+         STOP                
+message: .ASCII  "Bienvenue à ce programme d'affichage de tous les caractères ASCII.\n\n\x00"
+welcome: .ASCII  "Bienvenue au programme d'affichage des caractères ASCII.\x00"
+demande1:.ASCII  "\n\nPar quel caractère,dois-je commencer ? \x00"
+demande2:.ASCII  "\n\nPar quel caractère,dois-je terminer ? \x00"
+erNbrCar:.ASCII  "\nErreur : vous devez entrer un seul caractere par entree.\x00"
+liste:   .ASCII  "\n\nListe des caractères ASCII:\n\n\x00"
+final:   .ASCII  "\n\nFin normale du programme.\x00"
+avcaract:.BLOCK  1           ; #1c caractère de remplissage pour la combinaison "avcaract" et "caract"
+caract:  .BLOCK  1           ; #1c
+avlimite:.BLOCK  1           ; #1c caractère de remplissage pour la combinaison "avlimite" et "limite"
+limite:  .BLOCK  1           ; #1c
+entrée:  .BLOCK  1           ; #1c capture du ENTREE
+cpt:     .BLOCK  2           ; #2d compteur de boucle (afficher 5 car par lignes)
+         .END                  
