@@ -1,0 +1,5 @@
+CHARO    0x41,i
+
+STOP
+
+.END
