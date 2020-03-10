@@ -1,3 +1,5 @@
+; solution de la question 6 de l'examen intra d'automne 2014
+         
          LDA     0,i
 m:       CHARI   c,d
          LDBYTEA c,d
