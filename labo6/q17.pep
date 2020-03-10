@@ -1,4 +1,4 @@
-; solution de la question 5 de l'examen intra d'automne 2014
+; code de la question 5 de l'examen intra d'automne 2014
 
 lire:    DECI    n,d         ; indice dans le tableau tab
          LDX     n,d
