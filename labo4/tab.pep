@@ -1,3 +1,5 @@
+;ecriture et lecture d'un tableau
+         
          LDX     0,i
 ecriture:DECI    tab,x
          ADDX    2,i
