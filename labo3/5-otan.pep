@@ -1,5 +1,3 @@
-;Exemple pris du cours de Paul-Vahe Cicek
-
 loop:    LDX     0,i         ; do {
          CHARI   c,d
          LDBYTEX c,d         ; X = getChar();
