@@ -5,7 +5,7 @@ Vous pouvez me contacter via courriel (soucy.philippe.3@courrier.uqam.ca) ou sur
 ## Calendrier
 
 | Date | Sem | Lab | Sujet | Fichiers |
-| ------- | ------------- | ------ | ------------- | --- |
+| -------: | ------------- | ------ | ------------- | --- |
 | 7&nbsp;janvier  | 1 | - | Pas de laboratoire | - |
 | 14&nbsp;janvier | 2 | 1 | Exercices sur les nombres | [Solutions ex. bloc 1](https://github.com/phsoucy/inf2171-h2020-labos/raw/master/labo1/lab1_bloc_sol.pdf) |
 | 21&nbsp;janvier | 3 | 2 | Initiation à PEP/8 | [Solutions ex. diapo. 15](https://raw.githubusercontent.com/phsoucy/inf2171-h2020-labos/master/labo2/p15.pep) <br> [Solutions exercices diapo. 30](https://raw.githubusercontent.com/phsoucy/inf2171-h2020-labos/master/labo2/p16.pep) |
