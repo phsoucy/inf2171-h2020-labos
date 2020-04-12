@@ -2,6 +2,13 @@
 
 Vous pouvez me contacter via courriel (soucy.philippe.3@courrier.uqam.ca) ou sur Slack ([@Fil](https://ageei-uqam.slack.com)).
 Vous pouvez aussi poser votre question dans les "Issues" pour en faire profiter tout le monde.
+Si vous me contacter, il est possible d'organiser une rencontre Zoom individuel.
+
+## Foire aux questions (FAQ)
+
+Pour le bénéfice de tous et toutes, j'ai créé une [foire aux questions](FAQ.md) qui
+contient des réponses à des questions auxquelles j'ai répondues. N'hésitez pas à
+la consulter.
 
 ## Calendrier
 
