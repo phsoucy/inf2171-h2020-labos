@@ -24,5 +24,7 @@ la consulter.
 | 25&nbsp;février | - | Semaine de lecture | - |
 | 2&nbsp;mars | 7 | Réalisation du TP2 | - |
 | 10&nbsp;mars | 8 | Réalisation du TP2 | - |
+| 17&nbsp;mars | 9 | Annulé : COVID-19 | - |
+| 24&nbsp;mars | 10 | Annulé : COVID-19 | - |
 | 31&nbsp;mars | 11 | Période Q/R | - |
 | 7&nbsp;avril | 12 | Exercices sur des sous-programmes | [Solution ex. 1](https://raw.githubusercontent.com/phsoucy/inf2171-h2020-labos/master/labo12/ex1.pep)<br> [Solution ex. 2](https://raw.githubusercontent.com/phsoucy/inf2171-h2020-labos/master/labo12/ex2.pep) |
