@@ -3,6 +3,8 @@
 1. [Quelle est la différence entre les modes d'adressage sur la pile?](#1)
 2. [Comment utiliser l'instruction RETn?](#2)
 
+## Questions
+
 ### 1. Quelle est la différence entre les modes d'adressage sur la pile? <a name="1"></a>
 
 Pour pouvoir faire la différence entre chacun des modes d'adressage sur la pile, je vous invite à consulter l'[aide-mémoire PEP8](http://info.uqam.ca/~privat/INF2170/aide-pep8.pdf) fourni durant l'intra.
