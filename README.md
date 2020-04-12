@@ -7,7 +7,7 @@ Si vous me contacter, il est possible d'organiser une rencontre Zoom individuel.
 ## Foire aux questions (FAQ)
 
 Pour le bénéfice de tous et toutes, j'ai créé une [foire aux questions](FAQ.md) qui
-contient des réponses à des questions auxquelles j'ai répondues. N'hésitez pas à
+contient des réponses à des questions auxquelles j'ai répondues par écrit. N'hésitez pas à
 la consulter.
 
 ## Calendrier
