@@ -1,6 +1,6 @@
 ## Contact
 
-Vous pouvez me contacter via courriel (soucy.philippe.3@courrier.uqam.ca) ou sur Slack ([@Fil](https://ageei-uqam.slack.com)).
+Vous pouvez me contacter via courriel (soucy.philippe.3@courrier.uqam.ca) ou sur Slack ([@Fil](https://ageei-uqam.slack.com)). Vous pouvez aussi contacter Julien via younes.julien@courrier.uqam.ca ou @J.R.Y
 Vous pouvez aussi poser votre question dans les "Issues" pour en faire profiter tout le monde.
 Si vous me contactez, il est possible d'organiser une rencontre Zoom individuel.
 
