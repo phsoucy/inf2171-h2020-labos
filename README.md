@@ -28,3 +28,4 @@ la consulter.
 | 24&nbsp;mars | 10 | Annulé : COVID-19 | - |
 | 31&nbsp;mars | 11 | Période Q/R | - |
 | 7&nbsp;avril | 12 | Exercices sur des sous-programmes | [Solution ex. 1](https://raw.githubusercontent.com/phsoucy/inf2171-h2020-labos/master/labo12/ex1.pep)<br> [Solution ex. 2](https://raw.githubusercontent.com/phsoucy/inf2171-h2020-labos/master/labo12/ex2.pep) |
+| 14&nbsp;avril | 13 | Réalisation du TP3 | - |
