@@ -14,7 +14,7 @@ Si vous me contactez, il est possible d'organiser une rencontre Zoom individuel.
 
 ## Vidéos des séances <a name="videos"></a>
 
-Nous avons enregistré la [séance du 14 avril](labo13/Eregistrement_labo13.mp4) pour consultation différée.
+Nous avons enregistré la [séance du 14 avril](https://www.dropbox.com/s/zcy7dvx7gcsq8y6/Enregistrement_labo13.mp4) pour consultation différée.
 
 ## Foire aux questions (FAQ) <a name="faq"></a>
 
