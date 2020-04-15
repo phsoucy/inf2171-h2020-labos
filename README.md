@@ -1,16 +1,28 @@
-## Contact
+## Table des matières
+
+- [Contact](#contact)
+- [Vidéos des séances](#videos)
+- [Foire aux questions](#faq)
+- [Calendrier](#calendrier)
+
+## Contact <a name="contact"></a>
 
 Vous pouvez me contacter via courriel (soucy.philippe.3@courrier.uqam.ca) ou sur Slack ([@Fil](https://ageei-uqam.slack.com)). Vous pouvez aussi contacter Julien via younes.julien@courrier.uqam.ca ou @J.R.Y
-Vous pouvez aussi poser votre question dans les "Issues" pour en faire profiter tout le monde.
+
+Il est aussi possible de poser votre question dans les "Issues" pour en faire profiter tout le monde.
 Si vous me contactez, il est possible d'organiser une rencontre Zoom individuel.
 
-## Foire aux questions (FAQ)
+## Vidéos des séances <a name="videos"></a>
+
+Nous avons enregistré la [séance du 14 avril](labo13/Eregistrement_labo13.mp4) pour consultation différée.
+
+## Foire aux questions (FAQ) <a name="faq"></a>
 
 Pour le bénéfice de tous et toutes, j'ai créé une [foire aux questions](FAQ.md) qui
 contient des réponses à des questions auxquelles j'ai répondues par écrit. N'hésitez pas à
 la consulter.
 
-## Calendrier
+## Calendrier <a name="calendrier"></a>
 
 | Date | Lab | Sujet | Fichiers |
 | ---: | --- | ----- | -------- |
