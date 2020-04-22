@@ -44,7 +44,7 @@ Il s'agit d'une forme d'écriture de valeur qui est formalisée en base 2.
 | Signe  | Si le nombre est positif le bit le plus à gauche sera un `0` s'il est négatif, `1` |  positif --> `0`|
 | Exposant | 1) Convertir le nombre de `décimal` à `binaire`. <br> 2) Ramener la virgule de ce nombre binaire à la droite du `1` le plus significatif à l'aide d'un exposant adéquat.<br>3) Ajouter la valeur du pôle à l'exposant obtenue.(Il serait recommandé de le faire en hexadécimal pour que l'étape 4 soit plus facile)<br>4) Convertir le résultat de l'addition en binaire (sur 8 bits)| 1) 10.25<sub>10</sub> : <br> **.** 10/2 _quotient 5_ reste **0** <br>  5/2 _quotient 2_ reste **1** <br> 2/2 _quotient 1_ reste **0** <br> 1/2 _quotient 0_ reste **1** <br> Lecture de bas en haut : 10<sub>10</sub> = 1010<sub>2</sub> <br> **.** 0.25x2 = **0**.5 <br> 0.5x2 = **1**.0 <br> Lecture de haut en bas : 0.25<sub>10</sub> = 0.01<sub>2</sub> <br> **.** 10.25<sub>10</sub> = 1010.01<sub>2</sub> <br> (autre exemple conversion de la partie décimale: <br> 0.75<sub>10</sub>: <br>0.75x2=**1**.5 <br> 0.5x2 = **1**.0 <br> 0.75<sub>10</sub> = 0.11<sub>2</sub>) <br>2) 1010.01<sub>2</sub> = 1.01001x2<sup>**3**</sup> <br> 3) 7F<sub>16</sub> + 3<sub>16</sub> = 82<sub>16</sub> ( 3<sub>10</sub> = 3<sub>16</sub> ) <br> 4) 82<sub>16</sub> = `1000 0010`<sub>2</sub>  |
 |Mantisse |La partie décimal du nombre converti est la mantisse .| 1.`01001`<sub>2</sub> |
-| Résultat | | `0 10000010 01001000000000000000000`|
+| Résultat | | `0-10000010-01001000000000000000000`|
 
 <hr>
 
