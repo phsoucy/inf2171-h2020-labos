@@ -43,7 +43,7 @@ n:   .EQUATE   6   ; #2d
 Tu peux ensuite les adresser directement (après avoir fait `SUBSP 8,i`) avec les instructions suivantes par exemple :
 ```pep8
 LDA   n,s   ; pour charger 'n' dans le registre A
-STA   a,s   ; pour charger une autre valeur dans 'a'
+STA   a,s   ; pour enregistrer une autre valeur dans 'a'
 ```
 
 Pour plus d'exemples, je t'invites à consulter [ce programme](labo12/ex1.pep) et le reste de mon Github.
