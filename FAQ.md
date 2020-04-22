@@ -2,6 +2,7 @@
 
 1. [Quelle est la différence entre les modes d'adressage sur la pile?](#1)
 2. [Comment utiliser l'instruction RETn?](#2)
+3. [Comment je fais pour adresser les différentes variables dans la pile?](#3)
 
 ## Questions
 
@@ -26,3 +27,23 @@ Lorsqu'on appel un sous-programme, la valeur de retour (l'adresse suivant l'inst
 - Utiliser `ADDSP 4,i` qui ajoute 4 au pointeur de pile (dépile vos deux variables) et ensuite `RET0` qui branche à l'adresse indiquée par la nouvelle adresse du pointeur de pile.
 
 Ces deux options sont équivalentes et vous devez utiliser la deuxième option lorsque vous avez stocker plus de 7 octets dans la pile lors de l'exécution de votre sous-programme. Attention, les valeurs empilées sur la pile ne sont pas nécessairement des paramètres, cela peut aussi être de simple variables locales.
+
+### 3. Comment je fais pour adresser les différentes variables dans la pile? <a name="3"></a>
+
+Un truc pour bien avoir accès à tes traces c'est de déclarer des constantes et de décrémenter ton pointeur de pile tout d'un coup en faisant `SUBSP 8,i     ; #n #a #c #b`
+
+Tes constantes seraient définis de la manière suivante :
+```pep8
+b:   .EQUATE   0   ; #2c
+c:   .EQUATE   2   ; #2c
+a:   .EQUATE   4   ; #2c
+n:   .EQUATE   6   ; #2d
+```
+
+Tu peux ensuite les adresser directement (après avoir fait `SUBSP 8,i`) avec les instructions suivantes par exemple :
+```pep8
+LDA   n,s   ; pour charger 'n' dans le registre A
+STA   a,s   ; pour charger une autre valeur dans 'a'
+```
+
+Pour plus d'exemples, je t'invites à consulter [ce programme](labo12/ex1.pep) et le reste de mon Github.
