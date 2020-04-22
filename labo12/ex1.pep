@@ -19,8 +19,9 @@ enterNbr:SUBSP   4,i         ; #result #nbrEntre
 
 ;
 ; ****** fib
-; IN:    nbr=nombre de depart
-; OUT:   A=nombre suivant
+; IN:    SP+0=nombre de depart
+; OUT:   SP+2=resultat
+;        A=nombre suivant
 j:       .EQUATE 0           ; #2d
 nbrPrec: .EQUATE 2           ; #2d
 i:       .EQUATE 6           ; #2d
