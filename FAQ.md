@@ -3,6 +3,7 @@
 1. [Quelle est la différence entre les modes d'adressage sur la pile?](#1)
 2. [Comment utiliser l'instruction RETn?](#2)
 3. [Comment je fais pour adresser les différentes variables dans la pile?](#3)
+4. [Comment faire pour appeler une fonction récursivement?](#4)
 
 ## Questions
 
@@ -47,3 +48,12 @@ STA   a,s   ; pour enregistrer une autre valeur dans 'a'
 ```
 
 Pour plus d'exemples, je t'invites à consulter [ce programme](labo12/ex1.pep) et le reste de mon Github.
+
+### 4. Comment faire pour appeler une fonction récursivement si cela ajoute une nouvelle adresse de retour sur la pile à chaque fois? <a name="4"></a>
+
+
+Avant d’appeler ta fonction récursivement, tu dois préparer à nouveau les variables que tu lui passe en paramètre pour ne pas que son comportement change. Si ces paramètres sont plus loin dans la pile, tu dois les copier pour les empiler une nouvelle fois.
+
+Par exemple, si ta variable prend le nombre ‘n’ en paramètre à SP+0, tu dois t’assurer de l’empiler avant d’appeler la fonction à nouveau.
+
+Si tout est bien ficelé, si tu prépares tes variables locales (en faisant `SUBSP 8,i` par ex.) directement au début de ton sous-programme, ça devrait bien fonctionner pour la récursivité.
