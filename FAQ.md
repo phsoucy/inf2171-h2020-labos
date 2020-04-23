@@ -4,6 +4,7 @@
 2. [Comment utiliser l'instruction RETn?](#2)
 3. [Comment je fais pour adresser les différentes variables dans la pile?](#3)
 4. [Comment faire pour appeler une fonction récursivement?](#4)
+5. [Comment afficher la trace de la mémoire durant le déboguage?](#5)
 
 ## Questions
 
@@ -19,7 +20,11 @@ Ainsi, on retrouve les 4 modes d'adressage suivants :
 - `sxf`, accède à la valeur indiquée par l'adresse retrouvée à l'adresse "pointeur de pile + spécificateur d'opérande" et accède ensuite à cette adresse + la valeur du registre X (un pointeur vers un tableau sur la pile).
 
 NB. : Le pointeur de pile (PP) correspond à l'adresse de la valeur sur le dessus de la pile. La pile part du "bas" de la mémoire, vers le "haut", ainsi, plus on "descend" dans la pile, plus on incrémente l'adresse de la pile (plus la valeur a été empilée plus tôt dans l'exécution du programme). De cette façon, si on veut accéder à la valeur précédente de la pile et que la dernière valeur empilée est de 2 octets, l'on doit faire "PP + 2" pour obtenir l'adresse de cette valeur.
-Le spécificateur d'opérande (Spec) est la valeur que vous indiquée dans une ligne d'instruction. Exemple : `LDA Spec,d`
+Le spécificateur d'opérande (Spec) est la valeur que vous indiquée dans une ligne d'instruction. Exemple : 
+
+```pep8
+LDA Spec,d
+```
 
 ### 2. Comment utiliser l'instruction `RETn`? <a name="2"></a>
 
@@ -31,7 +36,11 @@ Ces deux options sont équivalentes et vous devez utiliser la deuxième option l
 
 ### 3. Comment je fais pour adresser les différentes variables dans la pile? <a name="3"></a>
 
-Un truc pour bien avoir accès à tes traces c'est de déclarer des constantes et de décrémenter ton pointeur de pile tout d'un coup en faisant `SUBSP 8,i     ; #n #a #c #b`
+Un truc pour bien avoir accès à tes traces c'est de déclarer des constantes et de décrémenter ton pointeur de pile tout d'un coup en faisant :
+
+```pep8
+SUBSP 8,i     ; #n #a #c #b
+```
 
 Tes constantes seraient définis de la manière suivante :
 ```pep8
@@ -57,3 +66,11 @@ Avant d’appeler ta fonction récursivement, tu dois préparer à nouveau les v
 Par exemple, si ta variable prend le nombre ‘n’ en paramètre à SP+0, tu dois t’assurer de l’empiler avant d’appeler la fonction à nouveau.
 
 Si tout est bien ficelé, si tu prépares tes variables locales (en faisant `SUBSP 8,i` par ex.) directement au début de ton sous-programme, ça devrait bien fonctionner pour la récursivité.
+
+### 5. Comment afficher la trace de la mémoire durant le déboguage? <a name="5"></a>
+
+Je vous invite à consulter [cette réponse](#3) et [cette documentation](labo3/Pep81Paper.pdf) pour une description complète sur comment afficher les traces. N'oubliez pas  qu'il est aussi important, lorsque vous dépilez vos variables, d'indiquer celles-ci en commentaire dans la bonne ordre (la variable la plus basse dans la pile à gauche, la première sur le dessus à droite), de cette façon :
+
+```pep8
+ADDSP 8,i     ; #n #a #c #b
+```
