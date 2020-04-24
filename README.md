@@ -41,4 +41,4 @@ Pour le bénéfice de tous et toutes, j'ai créé une [foire aux questions](FAQ.
 | 31&nbsp;mars | 13 | 11 | Période Q/R | - |
 | 7&nbsp;avril | 14 | 12 | Exercices sur des sous-programmes | [Solution ex. 1](labo12/ex1.pep)<br> [Solution ex. 2](labo12/ex2.pep) |
 | 14&nbsp;avril | 15 | 13 | [📹 Réalisation du TP3](https://www.dropbox.com/s/zcy7dvx7gcsq8y6/Enregistrement_labo13.mp4) | [Exemple pile](labo13/Exemple_pile.pep) |
-| 21&nbsp;avril | 16 | 14 | [📹 Exercices sur arithmétique réelle](https://www.dropbox.com/s/dapwl4jfyg9p7q7/zoom_0.mp4) <br> Travail sur le TP3 | [Récapitulatif de la représentation en IEEE 754](labo14/IEEE754_Exemple.md) <br> [Exercies de la séance](labo14/ex-float.pdf) | |
+| 21&nbsp;avril | 16 | 14 | [📹 Exercices sur arithmétique réelle](https://www.dropbox.com/s/dapwl4jfyg9p7q7/zoom_0.mp4) <br> Travail sur le TP3 | [Récapitulatif de la représentation en IEEE 754](labo14/IEEE754_Exemple.md) <br> [Exercices de la séance](labo14/ex-float.pdf) | |
