@@ -1,7 +1,6 @@
 ## Table des matières
 
 - [Contact](#contact)
-- [Vidéos des séances](#videos)
 - [Foire aux questions](#faq)
 - [Calendrier](#calendrier)
 
@@ -11,12 +10,6 @@ Vous pouvez me contacter via courriel (soucy.philippe.3@courrier.uqam.ca) ou sur
 
 Il est aussi possible de poser votre question dans les "Issues" pour en faire profiter tout le monde.
 Si vous me contactez, il est possible d'organiser une rencontre Zoom individuel.
-
-## Vidéos des séances <a name="videos"></a>
-
-Nous avons enregistré les séances suivante pour consultation différée :
-- [séance du 14 avril (labo 13)]
-- [séance du 21 avril (labo 14)]
 
 ## Foire aux questions (FAQ) <a name="faq"></a>
 
